@@ -1,0 +1,154 @@
+/** @format */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    /* border: dotted 1px red; */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.25fr 2fr;
+    gap: 2em;
+    width: 100%;
+    max-width: 900px;
+}
+
+.chat-form,
+.safety-notice,
+.subscribe-form {
+    background-color: #1e1e1e;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.chat-form h2 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.safety-notice h2 {
+    font-size: 1.1rem;
+}
+
+.subscribe-form h2 {
+    font-size: 1.25rem;
+}
+
+.chat-form h2,
+.safety-notice h2,
+.subscribe-form h2 {
+    margin-bottom: 0.75em;
+}
+
+.chat-form p,
+.safety-notice p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Increased margin to space out the fields */
+    border: 1px solid #333;
+    background-color: #262626;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.chat-form button {
+    width: 100%
+}
+
+button {
+    padding: 10px;
+    background-color: #0a84ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #0062cc;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+.safety-notice {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.safety-notice i {
+    font-size: 3em;
+    color: #0062cc;
+}
+
+.safety-notice__content button {
+    color: black;
+    background-color: white;
+    font-size: 0.9rem;
+    padding: 0.5em 1.5em;
+}
+
+.subscribe-form i {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 0.25em;
+}
+
+.subscribe-email {
+    display: flex;
+    gap: 1em;
+}
+
+.subscribe-email input {
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.subscribe-email button {
+    width: 15%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .right-column {
+        order: -1;
+    }
+}
